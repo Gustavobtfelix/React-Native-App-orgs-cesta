@@ -50,6 +50,7 @@ const estilos = StyleSheet.create({ //578 = altura da imagem, 768 = largura da i
         fontSize: 26,
         lineHeight: 42,
         fontWeight: "bold",
+        fontFamily: "MontserratBold",
     },
     quebraLinha: {
         flexDirection: "row", //altera posicionamento de itens na tela
@@ -63,6 +64,7 @@ const estilos = StyleSheet.create({ //578 = altura da imagem, 768 = largura da i
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
+        fontFamily: "MontserratRegular",
     },
     descricao: {
         color: "#A3A3A3",
