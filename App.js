@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+ //limitations of Expo: https://docs.expo.dev/introduction/why-not-expo/
+import { StatusBar, SafeAreaView,} from 'react-native';
 
-export default function App() {
+import Cesta from './src/telas/Cesta'; //importa arquivo js
+
+export default function App() {  /* SafeAreaView(necessaria se for usar no IOS), statusBar(serve para a borda do aplicativo) Text são componentos do react-native. StatusBar e componente do expo-status-bar */
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <StatusBar/>
+      <Cesta />
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
