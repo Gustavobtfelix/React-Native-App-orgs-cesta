@@ -49,7 +49,6 @@ const estilos = StyleSheet.create({ //578 = altura da imagem, 768 = largura da i
         color: "#464646",
         fontSize: 26,
         lineHeight: 42,
-        fontWeight: "bold",
         fontFamily: "MontserratBold",
     },
     quebraLinha: {
