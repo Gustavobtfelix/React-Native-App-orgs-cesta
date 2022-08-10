@@ -3,25 +3,27 @@ import { Image, StyleSheet, Dimensions, Text, View } from 'react-native';
 import topo from '../../assets/topo.png';
 import logoFazenda from '../../assets/logoFazenda.png';
 
+import Texto from '../componentes/Texto';
+
 const width = Dimensions.get('screen').width;
 
-export default function Cesta() { // export é para poder utilizar componente em outros arquivos, default limita a quantidade de funções que podem ser exportadas para 1. <> = fragmento (agrupamento de componentes)
+export default function Cesta() { // export é para poder utilizar componente em outros arquivos, default limita a quantidade de funções que podem ser exportadas para 1. <> = fragmento (agrupamento de componentes) texto = campo estilizado localizado na pasta componentes
     return<>
         <Image source={topo} style={estilos.imagemTopo}/>
-        <Text style ={estilos.titulo}>Detalhe da cesta</Text>
+        <Texto style ={estilos.titulo}>Detalhe da cesta</Texto>
 
         <View  style={estilos.cesta}>
-            <Text style={estilos.nome}>Cesta de Verduras</Text>
+            <Texto style={estilos.nome}>Cesta de Verduras</Texto>
             <View style={estilos.quebraLinha}>
                 <Image source={logoFazenda} style={estilos.imagemLogoFazenda}/>
-                <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+                <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
             </View>
-            <Text style={estilos.descricao}>
+            <Texto style={estilos.descricao}>
                 Uma cesta com produtos selecionados cuidadosamente
                 cuidadosamente da fazenda direto para
                 sua cozinha
-            </Text>
-            <Text style={estilos.preco}>R$ 40,00</Text>
+            </Texto>
+            <Texto style={estilos.preco}>R$ 40,00</Texto>
         </View>
     </>
 }
@@ -49,7 +51,7 @@ const estilos = StyleSheet.create({ //578 = altura da imagem, 768 = largura da i
         color: "#464646",
         fontSize: 26,
         lineHeight: 42,
-        fontFamily: "MontserratBold",
+        fontWeight: "bold",
     },
     quebraLinha: {
         flexDirection: "row", //altera posicionamento de itens na tela
@@ -63,7 +65,6 @@ const estilos = StyleSheet.create({ //578 = altura da imagem, 768 = largura da i
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
-        fontFamily: "MontserratRegular",
     },
     descricao: {
         color: "#A3A3A3",
