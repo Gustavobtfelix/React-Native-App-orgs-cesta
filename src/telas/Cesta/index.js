@@ -1,9 +1,9 @@
 import { Image, StyleSheet, Dimensions, Text, View } from 'react-native';
 
-import topo from '../../assets/topo.png';
-import logoFazenda from '../../assets/logoFazenda.png';
+import topo from '../../../assets/topo.png';
+import logoFazenda from '../../../assets/logoFazenda.png';
 
-import Texto from '../componentes/Texto';
+import Texto from '../../componentes/Texto';
 
 const width = Dimensions.get('screen').width;
 
