@@ -5,7 +5,7 @@ import {
   Montserrat_400Regular,
   Montserrat_700Bold} from '@expo-google-fonts/montserrat'; //importando fonte do google
 
-import Cesta from './src/telas/Cesta'; //importa arquivo js
+import Cesta from './src/telas/Cesta/index'; //importa arquivo js
 
 export default function App() {  /* fonteCarregada esta exportando um get para ser usado quando for definir fontes nesse modelo        SafeAreaView(necessaria se for usar no IOS), statusBar(serve para a borda do aplicativo) Text são componentos do react-native. StatusBar e componente do expo-status-bar */ 
     const [fonteCarregada] = useFonts({
