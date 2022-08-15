@@ -1,8 +1,8 @@
-import { Image, StyleSheet, View } from 'react-native';
+import {Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import Texto from '../../../componentes/Texto';
 
-export default function Detalhes({ nomeTexto, logo, nomeFazendaTexto, descricaoTexto, precoTexto}) {
+export default function Detalhes({ nomeTexto, logo, nomeFazendaTexto, descricaoTexto, precoTexto, botaoTexto}) {
     return<>
         <Texto style={estilos.nome}>{nomeTexto}</Texto>
         <View style={estilos.quebraLinha}>
@@ -13,9 +13,13 @@ export default function Detalhes({ nomeTexto, logo, nomeFazendaTexto, descricaoT
             {descricaoTexto}
         </Texto>
         <Texto style={estilos.preco}>{precoTexto}</Texto>
+        <TouchableOpacity style={estilos.botao} onPress={() => {}}>
+            <Texto style={estilos.textoBotao}>{ botaoTexto }</Texto>
+        </TouchableOpacity>
     </>
-}
+}//TouchableOpacity é um botão que ao ser clicado, ele fica com uma opacidade menor, para dar a sensação de que foi clicado
 
+//<Button title= {botaoTexto} />
 
 const estilos = StyleSheet.create({
     nome: {
@@ -48,5 +52,20 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         fontWeight: "bold",
-    }
+        
+    },
+    botao: {
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        paddingVertical: 16,
+        borderRadius: 116,
+        marginLeft: 212,
+    },
+    textoBotao: {
+        textAlign:"center",
+        color: "#FFFFFF",
+        fontSize: 16,
+        lineHeight: 26,
+        fontWeight: "bold",
+    },
 })
