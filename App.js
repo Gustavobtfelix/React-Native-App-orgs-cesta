@@ -3,9 +3,13 @@ import { StatusBar, SafeAreaView, View} from 'react-native';
 import { 
   useFonts, 
   Montserrat_400Regular,
-  Montserrat_700Bold} from '@expo-google-fonts/montserrat'; //importando fonte do google
+  Montserrat_700Bold
+} from '@expo-google-fonts/montserrat'; //importando fonte do google
+import AppLoading from 'expo-app-loading';
+
 
 import Cesta from './src/telas/Cesta/index'; //importa arquivo js
+import mock from './src/mocks/cestaMock'; //importa strings
 
 export default function App() {  /* fonteCarregada esta exportando um get para ser usado quando for definir fontes nesse modelo        SafeAreaView(necessaria se for usar no IOS), statusBar(serve para a borda do aplicativo) Text são componentos do react-native. StatusBar e componente do expo-status-bar */ 
     const [fonteCarregada] = useFonts({
@@ -13,14 +17,14 @@ export default function App() {  /* fonteCarregada esta exportando um get para s
       "MontserratBold": Montserrat_700Bold,
     });
 
-    if(!fonteCarregada){
-      return <View/>
+    if(!fonteCarregada){  //acontece enquanto a fonte não carregar
+      return <AppLoading /> 
     }
     return (
       <SafeAreaView>
         <StatusBar />
-        <Cesta />
+        <Cesta {...mock} />
       </SafeAreaView>
     )
-
+        //...mock é para passar todas as propriedades do mock para o componente Cesta
   }
