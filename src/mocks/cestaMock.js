@@ -19,8 +19,8 @@ const cesta = {
         botaoTexto: "Comprar",
     },
     itens: {
-        titulo: "Itens da cesta",
-        lista: [
+        tituloTexto: "Itens da cesta",
+        listaTexto: [
           {
             nome: "Tomate",
             imagem: tomate,
