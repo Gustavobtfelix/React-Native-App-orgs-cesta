@@ -1,5 +1,5 @@
  //limitations of Expo: https://docs.expo.dev/introduction/why-not-expo/
-import { StatusBar, SafeAreaView, View} from 'react-native';
+import { StatusBar, SafeAreaView} from 'react-native';
 import { 
   useFonts, 
   Montserrat_400Regular,
@@ -20,8 +20,8 @@ export default function App() {  /* fonteCarregada esta exportando um get para s
     if(!fonteCarregada){  //acontece enquanto a fonte não carregar
       return <AppLoading /> 
     }
-    return (
-      <SafeAreaView>
+    return ( //SafeAreaView(necessaria se for usar no IOS), statusBar(serve para a borda do aplicativo) style flex: 1 (ocupa todo o espaço da tela)
+      <SafeAreaView style={{ flex: 1}}> 
         <StatusBar />
         <Cesta {...mock} />
       </SafeAreaView>
