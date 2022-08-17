@@ -18,10 +18,14 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "Orgs",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
+        "package": "Orgs",
+        "versionCode": 1,
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
@@ -31,3 +35,4 @@
     }
   }
 }
+
